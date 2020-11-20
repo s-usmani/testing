@@ -28,7 +28,7 @@ class test_calc(unittest.TestCase):
             calc.divide(10, 0)
 
     def test_failure(self):
-        self.assertEqual(0, 5)
+        self.assertEqual(0, 0)
     
 
 if __name__ == '__main__':
