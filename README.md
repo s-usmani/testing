@@ -1,4 +1,3 @@
 # testing
 Testing with Jenkins. 
-Update to show to Jenkins again.
-Run tests.
+Test basic calculator tests with Jenkins.
