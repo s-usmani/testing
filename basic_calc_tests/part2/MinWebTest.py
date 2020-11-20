@@ -6,13 +6,17 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+
 
 class MinWebTest(unittest.TestCase):
     # execute the test <x = 0, y = 0, z = 0, submitButton = click> and check the output message is correct
     # Wanted to use chrome instead
 
     def test0(self):
-        driver = webdriver.Chrome(ChromeDriverManager().install())
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
         cwd = os.getcwd()
         print(cwd)
         # edit the next line to enter the location of "min.html" on your system
@@ -31,7 +35,9 @@ class MinWebTest(unittest.TestCase):
         driver.quit() # close the browser window
 
     def test1(self):
-        driver = webdriver.Chrome(ChromeDriverManager().install())
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
         # edit the next line to enter the location of "min.html" on your system
         driver.get(r"file:///Users/personalizedmac/Documents/Junior Year/Software Lab/classGitHub/UsmaniSyed/tutorial8/part2/min.html")
         elem = driver.find_element_by_id('x')
@@ -48,7 +54,9 @@ class MinWebTest(unittest.TestCase):
         driver.quit() # close the browser window
 
     def test2(self):
-        driver = webdriver.Chrome(ChromeDriverManager().install())
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
         # edit the next line to enter the location of "min.html" on your system
         driver.get(r"file:///Users/personalizedmac/Documents/Junior Year/Software Lab/classGitHub/UsmaniSyed/tutorial8/part2/min.html")
         elem = driver.find_element_by_id('x')
@@ -64,7 +72,9 @@ class MinWebTest(unittest.TestCase):
         driver.quit() # close the browser window
 
     def test3(self):
-        driver = webdriver.Chrome(ChromeDriverManager().install())
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
         # edit the next line to enter the location of "min.html" on your system
         driver.get(r"file:///Users/personalizedmac/Documents/Junior Year/Software Lab/classGitHub/UsmaniSyed/tutorial8/part2/min.html")
         elem = driver.find_element_by_id('x')
@@ -81,7 +91,9 @@ class MinWebTest(unittest.TestCase):
         driver.quit() # close the browser window
 
     def test4(self):
-        driver = webdriver.Chrome(ChromeDriverManager().install())
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
         # edit the next line to enter the location of "min.html" on your system
         driver.get(r"file:///Users/personalizedmac/Documents/Junior Year/Software Lab/classGitHub/UsmaniSyed/tutorial8/part2/min.html")
         elem = driver.find_element_by_id('x')
